@@ -234,6 +234,11 @@ public class PanelTextField<T> implements IGuiPanel {
         return selectEnd;
     }
 
+    public void selectText() {
+        this.selectStart = 0;
+        this.selectEnd = this.text == null ? 0 : this.text.length();
+    }
+
     public T getValue() {
         return this.filter.parseValue(getRawText());
     }

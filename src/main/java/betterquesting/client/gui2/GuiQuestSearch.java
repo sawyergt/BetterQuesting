@@ -6,6 +6,7 @@ import net.minecraft.client.gui.GuiScreen;
 
 import org.lwjgl.input.Keyboard;
 
+import betterquesting.api.storage.BQ_Settings;
 import betterquesting.api2.client.gui.GuiScreenCanvas;
 import betterquesting.api2.client.gui.controls.PanelButton;
 import betterquesting.api2.client.gui.controls.PanelTextField;
@@ -91,6 +92,8 @@ public class GuiQuestSearch extends GuiScreenCanvas {
             searchBox.setCursorPosition(Integer.MAX_VALUE); // move cursor to the end of the input text
             canvasQuestSearch.setSearchFilter(this.prevSearch);
         }
+
+        if (BQ_Settings.selectSearchField) searchBox.selectText();
     }
 
     private CanvasQuestSearch createSearchCanvas() {

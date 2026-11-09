@@ -165,6 +165,11 @@ public class ConfigHandler {
             CATEGORY_GENERAL,
             false,
             "If true, rewards will be disabled. This might not be supported by reward types.");
+        BQ_Settings.selectSearchField = config.getBoolean(
+            "Highlight Previous Quest Search",
+            CATEGORY_GENERAL,
+            false,
+            "If true, highlights the previous search query in the quest search page.");
 
         // Notifications
         BQ_Settings.questNotices = config.getBoolean(
